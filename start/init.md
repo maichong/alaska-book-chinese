@@ -19,11 +19,11 @@ npm -v
 npm i -g alaska-cli
 ```
 
-然后建立demo目录，并在其中执行初始化命令，然后按步骤、按提示输入参数：
+然后建立alaska-demo目录，并在其中执行初始化命令，然后按步骤、按提示输入参数：
 
 ```sh
-mkdir demo #Windows系统请使用md命令代替mkdir
-cd demo
+mkdir alaska-demo #Windows系统请使用md命令代替mkdir
+cd alaska-demo
 alaska init
 ```
 
@@ -34,11 +34,11 @@ alaska init
 初始化后，项目的目录结构如下：
 
 ```js
-demo
+alaska-demo
 ├── api/                 //api控制器
 ├── config/              //项目配置文件目录
 │   ├── alaska-admin.js  //alaska-service配置
-│   └── demo.js          //主Service配置
+│   └── alaska-demo.js          //主Service配置
 ├── controllers/         //控制器
 ├── locales/             //本地化语言设置
 ├── middlewares/         //中间件
@@ -50,7 +50,7 @@ demo
 ├── templates/           //swig模板目录
 ├── updates/             //自动更新脚本，供alaska-update启动时执行
 ├── views/               //Admin后台扩展视图控件
-├── demo.js              //项目入口文件，需要babel-node环境
+├── alaska-demo.js       //项目入口文件，需要babel-node环境
 ├── index.js             //项目入口文件，已加载babel-register，可直接执行
 ├── package.json
 ├── webpack.admin.dev.js //Admin后台控件webpack配置，development模式
@@ -59,9 +59,9 @@ demo
 
 ## 编译后台
 
-> alaska-admin Service提供一个基于React的可扩展管理平台。在默认初始化配置中，我们的demo项目已经自动依赖alaska-admin。
+> alaska-admin Service提供一个基于React的可扩展管理平台。在默认初始化配置中，我们的项目已经自动依赖alaska-admin。
 
-在demo这个新项目中，我们需要首先编译一下后台，运行：
+在这个新项目中，我们需要首先编译一下后台，运行：
 
 ```sh
 alaska build
@@ -83,7 +83,7 @@ node index.js
 
 然后在浏览器中打开 `http://localhost:5000` 查看效果。
 
-> 服务端口号依据初始化时设置而定，或者在 `config/demo.js` 配置文件中修改 `port` 参数。
+> 服务端口号依据初始化时设置而定，或者在 `config/alaska-demo.js` 配置文件中修改 `port` 参数。
 
 ## 登录管理平台
 
@@ -92,3 +92,13 @@ alaska-admin 默认的挂载点在 `/admin`，打开 `http://localhost:5000/admi
 > 我们建议您修改 alaska-admin 的默认挂载点以利于安全，编辑 `config/alaska-admin`，修改 `prefix` 参数，注意 `prefix` 参数必须以 `/` 开头，并不能以 `/` 结尾。
 
 > 如果管理平台一直显示 loading 界面，则有可能是因为您没有成功执行 `alaska build`。
+
+## 示例代码
+
+在 `https://github.com/maichong/alaska-demo/tree/init` 可以查看到本节的示例代码，或则按照下列步骤克隆示例代码到本地：
+
+```
+git clone https://github.com/maichong/alaska-demo.git
+cd alaska-demo
+git checkout init
+```
