@@ -5,6 +5,8 @@
   * [初始化项目](start/init.md)
   * [数据模型](start/model.md)
   * [REST接口](start/rest.md)
+  * [控制器](start/controller.md)
+  * [中间件](start/middleware.md)
   * [安装Service](start/service.md)
 
 * [进阶使用](basic/README.md)
