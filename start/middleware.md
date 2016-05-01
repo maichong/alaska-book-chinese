@@ -84,3 +84,14 @@ service.router.use(async function(ctx,next){
 	await next();
 });
 ```
+
+
+## 示例代码
+
+在 `https://github.com/maichong/alaska-demo/tree/middleware` 可以查看到本节的示例代码，或则按照下列步骤克隆示例代码到本地：
+
+```
+git clone https://github.com/maichong/alaska-demo.git
+cd alaska-demo
+git checkout middleware
+```
