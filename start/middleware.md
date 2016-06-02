@@ -14,7 +14,7 @@ alaska.app.use(async function(ctx,next){
 
 >请在alaska.listen()之前调用上方代码，否者将有可能无效，具体请看 [启动步骤](../advanced/startup.md)
 
-或则在主Service的配置文件中定义 `appMiddlewares` 选项，以配置的方式加载中间件。
+或者在主Service的配置文件中定义 `appMiddlewares` 选项，以配置的方式加载中间件。
 
 ## Service中间件
 
