@@ -10,8 +10,8 @@
 export default class Article extends service.Model {
   static label = 'Article';
   static fields = {
-    label: {
-      title: 'Title',
+    title: {
+      label: 'Title',
       type: String
     },
     content: {
