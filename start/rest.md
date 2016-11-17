@@ -7,7 +7,9 @@ Alaska内置RESTFUL接口，只需要配置数据模型的 `api` 静态属性即
 修改 `Article` 模型代码为：
 
 ```js
-export default class Article extends service.Model {
+import alaska from 'alaska';
+
+export default class Article extends alaska.Model {
   static label = 'Article';
   static api = {
     list: alaska.PUBLIC,

@@ -7,7 +7,9 @@
 然后编辑文件内容：
 
 ```js
-export default class Article extends service.Model {
+import alaska from 'alaska';
+
+export default class Article extends alaska.Model {
   static label = 'Article';
   static fields = {
     title: {
@@ -36,7 +38,7 @@ export default class Article extends service.Model {
 
 1. 文件名应与模型类名一致
 2. 使用 `export default` 语法导出类定义
-3. 模型类应继承于 `service.Model`
+3. 模型类应继承于 `alaska.Model`
 4. 模型类中，`fields` 静态属性是必须定义的，其他的可以省略。
 
 在上面的模型类定义中
@@ -108,7 +110,9 @@ alaska build
 在 `models` 目录下建立 `ArticleCat.js`，内容为：
 
 ```js
-export default class ArticleCat extends service.Model {
+import alaska from 'alaska';
+
+export default class ArticleCat extends alaska.Model {
   static label = 'Article Category';
   static title = 'name';
   static defaultColumns = '_id name parent';

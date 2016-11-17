@@ -18,9 +18,7 @@ Service可以互相依赖，在一个Alaska项目中，有一个主Service作为
 
 每个Service都有一个ID，一般是其NPM包名，例如alaska-user、alaska-balance等。
 
-Service可以为其依赖的子Service设置别名(alias)。
-
-获取一个子Service实例使用 `service.service(ID_OR_ALIAS)` 方法。ID_OR_ALIAS是子Service的ID或别名。
+获取一个子Service实例使用 `service.service(ID)` 方法。ID是子Service的ID。
 
 ## Model
 
@@ -32,7 +30,7 @@ Alaska采用mongoose完成底层的数据模型操作，Alaska的模型继承于
 
 每一个Model都有 `name` 、 `id` 、 `key` 属性，name即是其类名，id是其类名转连字符小写形式，比如 `PostCat` 模型的id是 `post-cat` ，key是其所在service的id加上其id，例如 `alaska-post.post-cat` 。
 
-在项目中，获取一个模型类可以使用 `service.model(Name)` 方法，或者直接import其文件，例如
+在项目中，获取一个模型类可以使用 `service.model(key)` 方法，或者直接import其文件，例如
 
 ```javascript
 import Article from '../models/Article'
@@ -64,7 +62,7 @@ Alaska的控制器基于[Koa v2](https://github.com/koajs/koa/tree/v2.x)，每�
 
 ## API
 
-Alaska中，专门用来对外提供JSON数据接口的控制器为API控制器，存放在api目录中。
+Alaska中，专门用来对外提供JSON数据接口的控制器为API控制器，存放在`api`目录中。
 
 所有API的HTTP访问点在Service挂载点的 `/api/` 子路径。
 
